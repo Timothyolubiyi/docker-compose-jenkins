@@ -8,7 +8,10 @@ The purpose of docker-compose is to function as docker cli but to issue multiple
  
 Run docker-compose up and Compose starts and runs your entire app.
 
-sudo hostname jenkins
+sudo hostname jenkins   -change hostname to jenkins
+sudo usermod -aG docker $USER
+mkdir jenkins
+
 
 # On AWS Ubuntu install docker compose
 sudo apt-get install docker-compose -y
