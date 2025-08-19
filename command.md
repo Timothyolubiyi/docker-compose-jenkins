@@ -1,23 +1,18 @@
-# docker-compose-jenkins
-A project demosnstrating the instalations of jenkins using docker compose in production
-
-Install Jenkins on Ubuntu 22.0.4 using Docker Compose | Setup 
-
-Jenkins on AWS EC2 Ubuntu instance | How to setup Jenkins in Ubuntu 
-EC2 instance using Docker?
-
+Install Jenkins on Ubuntu 22.0.4 using Docker Compose | Setup Jenkins on AWS EC2 Ubuntu instance | How to setup Jenkins in Ubuntu EC2 instance using Docker?
 Please follow the steps to install Jenkins using Docker compose on Ubuntu 22.0.4 instance. 
 
 What is Docker Compose?
-Compose is a tool for defining and running multi-container Docker 
-
-applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
  
-The purpose of docker-compose is to function as docker cli but to issue multiple commands much more quickly. To make use of 
-
-docker-compose, you need to encode the commands you were running before into a docker-compose.yml file
+The purpose of docker-compose is to function as docker cli but to issue multiple commands much more quickly. To make use of docker-compose, you need to encode the commands you were running before into a docker-compose.yml file
  
 Run docker-compose up and Compose starts and runs your entire app.
+
+sudo hostname jenkins
+
+# On AWS Ubuntu install docker compose
+sudo apt-get install docker-compose -y
+
 
 # Change Host Name to Jenkins
 
@@ -48,11 +43,14 @@ Jenkins Setup
 sudo docker-compose up -d 
 
 
+
+
 # Make sure Jenkins is up and running
 
 sudo docker-compose logs --follow
 
 You can also get the admin password
+
 
 
 How to get Jenkins admin password in another way?
@@ -62,10 +60,12 @@ How to get Jenkins admin password in another way?
 sudo docker ps
 
 
+
 # Get admin password by executing below command
 
 
 sudo docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
 
 
 Access Jenkins in web browser
@@ -95,6 +95,8 @@ Also create user name and password.
 enter everything as admin. at least user name as admin password as admin
 
 Click on Save and Finish. Click on start using Jenkins. Now you should see a screen like below:
+
+
 
 
 That's it we have setup Jenkins successfully using Docker compose. 
